@@ -1,7 +1,7 @@
 {
   "name": "sqlnavigator",
   "version": "0.1.0",
-  "description": "",
+  "description": "SQL Navigator - Bringing PostgreSQL to Web",
   "main": "index.js",
   "type": "module",
   "scripts": {
