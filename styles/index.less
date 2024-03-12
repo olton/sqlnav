@@ -1,0 +1,80 @@
+:root {
+    --border-color: #efefef;
+    --appbar-menu-item-hover-background: rgba(0,0,0,.1);
+    --appbar-menu-item-hover-color: #000000;
+    --logo-color: #00bcf2;
+}
+
+body {
+    height: 100vh;
+    max-height: 100vh;
+    padding-top: 50px;
+}
+
+#logo {
+    height: 24px;
+    margin-right: 10px;
+}
+
+#logo-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--logo-color);
+}
+
+main {
+    height: 100%;
+}
+
+#explorer {
+    height: 100%;
+
+    .toolbar {
+        margin-top: 2px;
+
+        button {
+            margin-right: 2px;
+            &:active, &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.explorer-header {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#tree {
+    border: 1px solid var(--border-color)!important;
+    margin-top: 6px;
+    height: ~"calc(100% - 82px)";
+    overflow-y: auto;
+}
+
+.app-bar {
+    position: absolute;
+    z-index: 1;
+}
+
+.app-bar-menu {
+    li, a {
+        line-height: 32px!important;
+    }
+
+    li:hover {
+        background: transparent!important;
+    }
+
+    li a {
+        &:hover {
+            background: var(--appbar-menu-item-hover-background);
+            color: var(--appbar-menu-item-hover-color);
+        }
+    }
+}
+
+.d-menu {
+    border: 1px solid var(--border-color);
+}

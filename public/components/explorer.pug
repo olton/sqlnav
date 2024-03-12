@@ -1,0 +1,42 @@
+div.explorer-inner
+    div.explorer-header
+        span Data Explorer
+
+    div.toolbar.d-flex
+
+        button.button.small.outline.square(title="Add Data Source")
+            span.mif-magic-wand
+
+        button.button.small.outline.square(title="Data Source Properties")
+            span.mif-database
+
+        button.button.small.outline.square(title="Refresh")
+            span.mif-spinner4
+
+        button.button.small.outline.square(title="New Query")
+            span.mif-featured-play-list
+
+        div.dropdown-button(style="height: 28px;")
+            button.button.small.outline.dropdown-toggle(title="New Object" style="height: 27.5px;")
+                span.mif-libreoffice
+            ul.d-menu.context(data-role="dropdown")
+                li: a: span Schema
+                li: a: span Language
+                li: a: span Database
+                li: a: span Role
+                li: a: span User
+                li.divider
+                li: a: span Virtual View
+                li.divider
+                li: a: span Table
+                li: a: span Materialized View
+                li: a: span View
+                li: a: span Operator
+                li: a: span Sequence
+                li: a: span Collation
+
+        button.button.small.outline.square.ml-auto(title="Explorer Options")
+            span.mif-more-vert
+
+    div
+        ul(id="tree" data-role="treeview")

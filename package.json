@@ -1,0 +1,42 @@
+{
+  "name": "sqlnavigator",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node .",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "dev": "npm run watch"
+  },
+  "keywords": [
+    "sql",
+    "admin",
+    "administration",
+    "sqlmanager",
+    "sqlnavigator"
+  ],
+  "author": "Serhii Pimenov <serhii@pimenov.com.ua>",
+  "license": "GPLv3",
+  "dependencies": {
+    "express": "^4.18.3",
+    "express-session": "^1.18.0",
+    "metro4": "^4.5.12-rc12",
+    "pg": "^8.11.3",
+    "pug": "^3.0.2",
+    "serve-favicon": "^2.5.0",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "autoprefixer": "^10.4.18",
+    "less": "^4.2.0",
+    "postcss": "^8.4.35",
+    "rollup": "^4.13.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-progress": "^1.1.2",
+    "shx": "^0.3.4"
+  }
+}
