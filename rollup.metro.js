@@ -7,19 +7,13 @@ import progress from 'rollup-plugin-progress';
 const production = !(process.env.ROLLUP_WATCH),
     sourcemap = !production
 
-const banner = `
-/*!
- * SQL Navigator (https://sqlnav.com)
- * Copyright ${new Date().getFullYear()} by Serhii Pimenov
- * Licensed under GPLv3
- !*/
-`
+const banner = ``
 
 const targetDir = `./src/public`
 
 export default [
     {
-        input: './src/client_app/js/index.js',
+        input: './src/client_app/js/metro.js',
         watch: {
             clearScreen: false,
         },
@@ -27,10 +21,10 @@ export default [
             progress({clearLine: true}),
             nodeResolve({browser: true}),
             postcss({
-                extract: `css/index.css`,
-                minimize: false,
+                extract: `css/metro.css`,
+                minimize: true,
                 use: ['less'],
-                sourceMap: sourcemap,
+                sourceMap: false,
                 plugins: [
                     autoprefixer(),
                 ]
@@ -42,9 +36,9 @@ export default [
             format: 'iife',
             sourcemap: sourcemap,
             banner,
-            name: "sqlnav",
+            name: "metro",
             plugins: [
-                production && terser({
+                terser({
                     keep_classnames: true,
                     keep_fnames: true
                 })

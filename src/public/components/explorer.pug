@@ -1,10 +1,12 @@
 div.explorer-inner
     div.explorer-header
         span Data Explorer
+        button.button.square.outline.small.ml-auto#explorer-hide
+            span.mif-arrow-left
 
     div.toolbar.d-flex
 
-        button.button.small.outline.square(title="Add Data Source")
+        button#add-ds.button.small.outline.square(title="Add Data Source")
             span.mif-magic-wand
 
         button.button.small.outline.square(title="Data Source Properties")
@@ -13,7 +15,7 @@ div.explorer-inner
         button.button.small.outline.square(title="Refresh")
             span.mif-spinner4
 
-        button.button.small.outline.square(title="New Query")
+        button#new-editor.button.small.outline.square(title="New Query")
             span.mif-featured-play-list
 
         div.dropdown-button(style="height: 28px;")

@@ -1,5 +1,6 @@
 :root {
     --border-color: #efefef;
+    --border-radius: 10px;
     --appbar-menu-item-hover-background: rgba(0,0,0,.1);
     --appbar-menu-item-hover-color: #000000;
     --logo-color: #00bcf2;
@@ -8,12 +9,12 @@
 body {
     height: 100vh;
     max-height: 100vh;
-    padding-top: 50px;
+    padding-top: 50px!important;
 }
 
 #logo {
     height: 24px;
-    margin-right: 10px;
+    margin-right: 4px;
 }
 
 #logo-text {
@@ -31,19 +32,28 @@ main {
 
     .toolbar {
         margin-top: 2px;
+    }
+}
 
-        button {
-            margin-right: 2px;
-            &:active, &:focus {
-                box-shadow: none;
-            }
-        }
+.button {
+    margin-right: 2px;
+    border: none;
+
+    &:active, &:focus {
+        box-shadow: none;
+    }
+
+    &:hover, &.active-toggle {
+        background: #e8e8e8;
     }
 }
 
 .explorer-header {
-    padding: 10px;
+    padding: 10px 0 10px 10px;
     border-bottom: 1px solid var(--border-color);
+    font-weight: bold;
+    color: #bdbdbd;
+    display: flex;
 }
 
 #tree {
@@ -60,7 +70,7 @@ main {
 
 .app-bar-menu {
     li, a {
-        line-height: 32px!important;
+        line-height: 24px!important;
     }
 
     li:hover {
@@ -77,4 +87,45 @@ main {
 
 .d-menu {
     border: 1px solid var(--border-color);
+}
+
+#explorer-toggle {
+    display: none;
+}
+
+.no-explorer {
+    #explorer-toggle {
+        display: flex;
+    }
+
+    #explorer {
+        display: none;
+
+        & + .gutter {
+            display: none;
+        }
+    }
+
+    #content {
+        flex-basis: 100%;
+    }
+}
+
+form {
+    label {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+#content-holder {
+    height: ~"calc(100% - 66px)";
+}
+
+#content-holder > div {
+    height: 100%;
+}
+
+.sql-editor, .sql-result {
+    height: 100%;
 }

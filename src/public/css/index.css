@@ -1,0 +1,104 @@
+:root {
+  --border-color: #efefef;
+  --border-radius: 10px;
+  --appbar-menu-item-hover-background: rgba(0, 0, 0, 0.1);
+  --appbar-menu-item-hover-color: #000000;
+  --logo-color: #00bcf2;
+}
+body {
+  height: 100vh;
+  max-height: 100vh;
+  padding-top: 50px!important;
+}
+#logo {
+  height: 24px;
+  margin-right: 4px;
+}
+#logo-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--logo-color);
+}
+main {
+  height: 100%;
+}
+#explorer {
+  height: 100%;
+}
+#explorer .toolbar {
+  margin-top: 2px;
+}
+.button {
+  margin-right: 2px;
+  border: none;
+}
+.button:active,
+.button:focus {
+  box-shadow: none;
+}
+.button:hover,
+.button.active-toggle {
+  background: #e8e8e8;
+}
+.explorer-header {
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: bold;
+  color: #bdbdbd;
+  display: flex;
+}
+#tree {
+  border: 1px solid var(--border-color) !important;
+  margin-top: 6px;
+  height: calc(100% - 82px);
+  overflow-y: auto;
+}
+.app-bar {
+  position: absolute;
+  z-index: 1;
+}
+.app-bar-menu li,
+.app-bar-menu a {
+  line-height: 24px!important;
+}
+.app-bar-menu li:hover {
+  background: transparent!important;
+}
+.app-bar-menu li a:hover {
+  background: var(--appbar-menu-item-hover-background);
+  color: var(--appbar-menu-item-hover-color);
+}
+.d-menu {
+  border: 1px solid var(--border-color);
+}
+#explorer-toggle {
+  display: none;
+}
+.no-explorer #explorer-toggle {
+  display: flex;
+}
+.no-explorer #explorer {
+  display: none;
+}
+.no-explorer #explorer + .gutter {
+  display: none;
+}
+.no-explorer #content {
+  flex-basis: 100%;
+}
+form label {
+  font-size: 14px;
+  font-weight: 500;
+}
+#content-holder {
+  height: calc(100% - 66px);
+}
+#content-holder > div {
+  height: 100%;
+}
+.sql-editor,
+.sql-result {
+  height: 100%;
+}
+
+/*# sourceMappingURL=index.css.map */

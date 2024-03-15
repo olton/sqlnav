@@ -1,0 +1,16 @@
+html(lang="en").light-theme.scrollbar-type-1.sb-darkViolet
+    include components/head
+
+    body.m4-cloak
+        include components/appbar
+
+        main.gutter-style-dotted(data-role="splitter" data-split-sizes="400px, 100" data-gutter-size="10")
+            div#explorer
+                include components/explorer
+
+            div#content
+                ul(data-role="page-control" id="pc" data-append-button="false" data-ref-control="true" data-default-new-tab-position="after")
+                div#content-holder
+
+
+        include components/footer

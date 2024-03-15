@@ -1,0 +1,9 @@
+{
+    "verbose": true,
+    "ignore": ["src/db/**", "src/tmp/**"],
+    "watch": ["src/"],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "js,json,pug"
+}
