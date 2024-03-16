@@ -26,14 +26,14 @@
                 this.showAddDataSourceDialog();
             });
             $(document).on('click', '#new-editor', () => {
-                this.createEditor();
+                this.createQueryEditor();
             });
         }
 
-        createEditor(text = ''){
+        createQueryEditor(text = ''){
             const pc = Metro.getPlugin("#pc", "page-control");
             pc.addTab({
-                caption: `Unnamed ${this.pageIndex}`,
+                caption: `Query ${this.pageIndex}`,
                 ref: `#content${this.pageIndex}`
             });
 
@@ -41,16 +41,21 @@
                 .id(`content${this.pageIndex}`)
                 .addClass("content-window")
                 .html(`
-                <div data-role="splitter" data-split-mode="vertical" data-split-sizes="100, 0" data-gutter-size="10" class="gutter-style-dotted">
-                    <div class="sql-editor" id="editor${this.pageIndex}"></div>
-                    <div class="sql-result" id="result${this.pageIndex}"></div>
+                <div data-role="splitter" data-split-mode="vertical" data-split-sizes="50, 50" data-gutter-size="10" class="gutter-style-dotted data-window">
+                    <div class="sql-editor">
+                        <div class="sql-editor-content" id="editor${this.pageIndex}"></div>
+                    </div>
+                    <div class="sql-result">
+                        <div class="sql-result-content" id="result${this.pageIndex}"></div>
+                    </div>
                 </div>
             `)
                 .appendTo("#content-holder");
 
             monaco.editor.create($(`#editor${this.pageIndex}`)[0], {
                 value: text,
-                language: 'sql'
+                language: 'pgsql',
+                automaticLayout: true,
             });
 
             this.pageIndex++;
